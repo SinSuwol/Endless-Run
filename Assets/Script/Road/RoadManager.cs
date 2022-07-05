@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RoadManager : MonoBehaviour
 {
-    public float speed;
     public GameObject road;
 
     List<GameObject> roadList;
@@ -30,7 +29,7 @@ public class RoadManager : MonoBehaviour
     {
         for(int i = 0; i < roadList.Count; i++)
         {
-            roadList[i].transform.Translate(Vector3.back * speed * Time.deltaTime);
+            roadList[i].transform.Translate(Vector3.back * GameManager.instance.speed * Time.deltaTime);
         }
 
         if (roadList[lastRoad].transform.position.z <= -20)

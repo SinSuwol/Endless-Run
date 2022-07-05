@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class Controll : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Animator animator;
 
-    // Update is called once per frame
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))   
@@ -27,4 +23,15 @@ public class Controll : MonoBehaviour
             transform.position += new Vector3(1.5f, 0, 0);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Obstacle")
+        {
+            GameManager.instance.speed = 0;
+            animator.SetTrigger("Death");
+            
+        }
+    }
+    
 }
