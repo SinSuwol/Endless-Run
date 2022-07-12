@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class ObstacleCreate : MonoBehaviour
 {
-    public GameObject obstacle;
-
-    
     void Start()
     {
         // InvokeRepeating : 몇 초후에 함수가 실행되고, 특성한 시간마다 함수가 반복적으로 실행되는 함수입니다. 
@@ -21,6 +18,6 @@ public class ObstacleCreate : MonoBehaviour
     {
         if (GameManager.instance.state == false) return;
 
-        Instantiate(obstacle, new Vector3(0, 0.2f, 7.5f), Quaternion.identity);
+        ObjectPool.Instance.GetQueue();
     }
 }

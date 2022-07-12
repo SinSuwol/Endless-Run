@@ -6,7 +6,7 @@ public class ObstacleProperty : MonoBehaviour
 {
     private int value;
     public GameObject [] tireStack;
-    public Animator[] animator;
+
     private void Start()
     {
         value = Random.Range(0, 3);
@@ -27,18 +27,13 @@ public class ObstacleProperty : MonoBehaviour
 
         if(transform.position.z <= -10f)
         {
-            Destroy(gameObject);
+            gameObject.transform.position = new Vector3(0, 0.2f, 7.5f);
+            ObjectPool.Instance.InsertQueue(gameObject);
         }
     }
 
     // OnBecameInvisible <- 카메라가 비추는 화면 밖으로 이벤트를 발동하는 함수입니다.
     // MeshRender가 필요합니다.
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Character")
-        {
-            animator[value].enabled = true;
-        }
-    }
+    
 
 }

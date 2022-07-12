@@ -20,6 +20,25 @@ public class GameManager : MonoBehaviour
         }
 
         state = true;
+
+        StartCoroutine(SpeedIncrease());
     }
 
+    IEnumerator SpeedIncrease()
+    {
+        while (state)
+        {
+            yield return new WaitForSeconds(1f);
+            speed++;
+
+            if(state == false)
+            {
+                speed = 0;
+            }
+            if(speed >= 50)
+            {
+                speed = 50;
+            }
+        }
+    }
 }

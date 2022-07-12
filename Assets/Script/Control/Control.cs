@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Controll : MonoBehaviour
+public class Control : MonoBehaviour
 {
     public Animator animator;
 
@@ -15,6 +15,7 @@ public class Controll : MonoBehaviour
         {
             if (transform.position.x <= -1.0f) return;
 
+            SoundControl.Instance.SoundCall("Move");
             transform.position += new Vector3(-1.5f, 0, 0);
         }
 
@@ -22,6 +23,7 @@ public class Controll : MonoBehaviour
         {
             if (transform.position.x >= 1.0f) return;
 
+            SoundControl.Instance.SoundCall("Move");
             transform.position += new Vector3(1.5f, 0, 0);
         }
     }
@@ -33,6 +35,7 @@ public class Controll : MonoBehaviour
             animator.SetTrigger("Death");
             GameManager.instance.speed = 0;
             GameManager.instance.state = false;
+            SoundControl.Instance.SoundCall("Collision");
 
         }
     }
