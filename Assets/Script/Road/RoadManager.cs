@@ -6,10 +6,12 @@ public class RoadManager : MonoBehaviour
 {
     public GameObject road;
 
+
     List<GameObject> roadList;
 
     int firstRoad;
     int lastRoad;
+
 
     Vector3 nextRoad = Vector3.zero;
 
@@ -47,7 +49,8 @@ public class RoadManager : MonoBehaviour
             lastRoad++;
 
             if (lastRoad >= roadList.Count)
-            {
+            {          
+
                 lastRoad = 0;
             }
         }
