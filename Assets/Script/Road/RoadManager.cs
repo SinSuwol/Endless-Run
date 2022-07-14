@@ -50,7 +50,6 @@ public class RoadManager : MonoBehaviour
 
             if (lastRoad >= roadList.Count)
             {          
-
                 lastRoad = 0;
             }
         }

@@ -10,9 +10,14 @@ public class Coin : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (GameManager.instance.state == false) return;
+
         if (other.gameObject.tag == "Character")
         {
+            SoundControl.Instance.SoundCall("Coin");
+            GameManager.instance.coin += 10;
             gameObject.SetActive(false);
+            GameManager.instance.Save();
 
         }
     }

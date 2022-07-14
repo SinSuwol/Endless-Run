@@ -5,7 +5,7 @@ using UnityEngine;
 public class Control : MonoBehaviour
 {
     public Animator animator;
-
+    public ParticleSystem effect;
 
     void Update()
     {
@@ -35,8 +35,14 @@ public class Control : MonoBehaviour
             animator.SetTrigger("Death");
             GameManager.instance.speed = 0;
             GameManager.instance.state = false;
+            InterfaceManager.instance.ActiveUI();
             SoundControl.Instance.SoundCall("Collision");
 
+        }
+
+        if (other.gameObject.tag == "Coin")
+        {
+            effect.Play();
         }
     }
 

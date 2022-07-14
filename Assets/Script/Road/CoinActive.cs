@@ -5,7 +5,6 @@ using UnityEngine;
 public class CoinActive : MonoBehaviour
 {
     public GameObject [] coin;
-  
 
     private void Start()
     {

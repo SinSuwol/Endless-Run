@@ -11,9 +11,12 @@ public class GameManager : MonoBehaviour
 
     public float speed;
     public bool state;
+    public int coin;
 
     void Start()
     {
+        Load();
+
         if (instance == null)
         {
             instance = this;
@@ -21,24 +24,17 @@ public class GameManager : MonoBehaviour
 
         state = true;
 
-        StartCoroutine(SpeedIncrease());
     }
 
-    IEnumerator SpeedIncrease()
+    public void Save()
     {
-        while (state)
-        {
-            yield return new WaitForSeconds(1f);
-            speed++;
-
-            if(state == false)
-            {
-                speed = 0;
-            }
-            if(speed >= 50)
-            {
-                speed = 50;
-            }
-        }
+        PlayerPrefs.SetInt("Coin", coin);
     }
+
+    public void Load()
+    {
+        coin = PlayerPrefs.GetInt("Coin");
+    }
+
+
 }
