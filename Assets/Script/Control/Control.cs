@@ -40,10 +40,6 @@ public class Control : MonoBehaviour
 
         }
 
-        if (other.gameObject.tag == "Coin")
-        {
-            effect.Play();
-        }
     }
 
   

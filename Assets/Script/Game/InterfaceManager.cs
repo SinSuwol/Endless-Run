@@ -25,6 +25,15 @@ public class InterfaceManager : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }
+    public void ExitButton()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Appliaction.Quit();
+#endif
+    }
+
     public void ActiveUI()
     {
         window.SetActive(true);
