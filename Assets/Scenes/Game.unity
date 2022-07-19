@@ -246,7 +246,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 304514829}
-  effect: {fileID: 2026920971}
+  item:
+  - {fileID: 1046144552}
+  - {fileID: 1168920564}
 --- !u!54 &304514831
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -362,6 +364,82 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5507a8c6a22c404ab324980c4e8a11b, type: 3}
+--- !u!1 &456220113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 456220114}
+  - component: {fileID: 456220116}
+  - component: {fileID: 456220115}
+  m_Layer: 5
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &456220114
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456220113}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1540109637}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 50, y: 950}
+  m_SizeDelta: {x: 780, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &456220115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456220113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 484708ad00772824c8ff678c35cd3ded, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &456220116
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456220113}
+  m_CullTransparentMesh: 1
 --- !u!1 &483751245
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,6 +736,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Santa-Hat
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bac14327a1aeaa2478f942d793f52b12, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bac14327a1aeaa2478f942d793f52b12, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -741,7 +823,7 @@ PrefabInstance:
       objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 4178079637827320009, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
       propertyPath: m_Name
-      value: Item Invincibility
+      value: Item Rod
       objectReference: {fileID: 0}
     - target: {fileID: 4178079637845725718, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
       propertyPath: m_Text
@@ -813,11 +895,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4178079638178549099, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 4178079638178549099, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -100
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4178079638178549099, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -833,7 +915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4178079638178549100, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
       propertyPath: m_Name
-      value: Invincibility Border
+      value: Border Rod
       objectReference: {fileID: 0}
     - target: {fileID: 4178079638215059104, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -866,6 +948,10 @@ PrefabInstance:
     - target: {fileID: 4178079638215059104, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178079638215059106, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
+      propertyPath: m_Name
+      value: Rod Purchase Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
@@ -919,9 +1005,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information:
-  - price: 500
+  - price: 3000
     sprite: {fileID: 21300000, guid: 7188dd1aa5e8d6146bd03734a6c6566c, type: 3}
-  - price: 750
+  - price: 5000
     sprite: {fileID: 21300000, guid: 62687ca798f59aa41a5bf81e0b8001c1, type: 3}
   priceText:
   - {fileID: 1023281737}
@@ -929,6 +1015,20 @@ MonoBehaviour:
   shapeImage:
   - {fileID: 571809944}
   - {fileID: 2131518741}
+  PurchaseButton:
+  - {fileID: 873108013}
+  - {fileID: 1776715522}
+--- !u!114 &873108013 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4178079638215059104, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
+  m_PrefabInstance: {fileID: 4178079638329251935}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,6 +1257,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1046144552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: bac14327a1aeaa2478f942d793f52b12, type: 3}
+  m_PrefabInstance: {fileID: 785146305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1083288211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,6 +1307,11 @@ Transform:
   m_Father: {fileID: 980368139}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1168920564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 10ffc052a8e4bb8439b2ce53b6daf3a4, type: 3}
+  m_PrefabInstance: {fileID: 1527520713}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1213509105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,6 +1545,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candy-Cane
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 10ffc052a8e4bb8439b2ce53b6daf3a4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 10ffc052a8e4bb8439b2ce53b6daf3a4, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1527,6 +1641,7 @@ RectTransform:
   - {fileID: 1919594966}
   - {fileID: 151295284}
   - {fileID: 815417256}
+  - {fileID: 456220114}
   m_Father: {fileID: 554798908}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1605,6 +1720,8 @@ MonoBehaviour:
   speed: 5
   state: 0
   coin: 0
+  hat: 0
+  rod: 0
 --- !u!4 &1593435471
 Transform:
   m_ObjectHideFlags: 0
@@ -1841,6 +1958,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 118f5f0ab6b56fb44b82a6b0dfa2ed87, type: 3}
   - {fileID: 8300000, guid: 98d5b55c5cdba9140b53f92ccb9a9fd6, type: 3}
   - {fileID: 8300000, guid: 35f87bf9bfee0444086d20a3662e1362, type: 3}
+--- !u!114 &1776715522 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4178079638215059104, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
+  m_PrefabInstance: {fileID: 815417255}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1789495295
 GameObject:
   m_ObjectHideFlags: 0
@@ -2112,11 +2240,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919594965}
   m_CullTransparentMesh: 1
---- !u!198 &2026920971 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2955623459812423941, guid: f5507a8c6a22c404ab324980c4e8a11b, type: 3}
-  m_PrefabInstance: {fileID: 388669010}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2081756746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2209,6 +2332,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 4178079637827320009, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
+      propertyPath: m_Name
+      value: Item Hat
+      objectReference: {fileID: 0}
     - target: {fileID: 4178079637845725718, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
       propertyPath: m_Text
       value: 
@@ -2279,7 +2406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4178079638178549099, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -250
       objectReference: {fileID: 0}
     - target: {fileID: 4178079638178549099, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2299,7 +2426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4178079638178549100, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
       propertyPath: m_Name
-      value: Speed Run Border
+      value: Border Hat
       objectReference: {fileID: 0}
     - target: {fileID: 4178079638215059104, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2328,6 +2455,10 @@ PrefabInstance:
     - target: {fileID: 4178079638215059104, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178079638215059106, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
+      propertyPath: m_Name
+      value: Hat Purchase Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e930a5c2785df7d4487f69a075eeab3a, type: 3}
